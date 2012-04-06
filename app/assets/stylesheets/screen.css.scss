@@ -1,0 +1,144 @@
+// Adverts
+//==================================================
+.banner_ad {
+  width:729px;
+  height:90px;
+  border: 1px solid #dbd6d6;
+  background:#e5e5e5;
+  margin:10px 0 10px 0;
+
+}
+
+// Structure
+//==================================================
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 18px; 
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px; 
+}
+
+small {
+  font-size:80%;
+}
+
+// Global Class Styles
+//==================================================
+.search-query {
+  border-radius:8px;
+}
+
+.well {
+  margin-top:20px;
+}
+
+.sidebar-nav { 
+}
+
+.form-horizontal .control-label {
+  width:120px;
+}
+
+.form-horizontal .controls {
+  margin-left: 132px;
+}
+ 
+
+// People
+//==================================================
+.entry_container {
+  border-top:2px solid #08C;
+  overflow:hidden;
+  
+  .entry_header {
+    background:#F2F4F8;
+    height:18px;
+    padding:8px;
+    color:#08C;
+  }
+  
+  .media {
+    float:left;
+    margin-top:4px;
+  }
+  
+  .text {
+    float:right;
+    width:460px;
+    
+    h2 {
+      line-height:28px;
+      
+      small {
+        font-size:40%;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+// Errors / Messages
+//==================================================
+
+// fix for customized error validation
+.control-group > span {
+  display:none
+}
+
+span.validation-error {
+  color:#ea4f4f;
+}
+
+div.alert {
+  width:350px;  
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px; } }
+
+#notice {
+  color: green; }
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table; }
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff; }
+  ul li {
+    font-size: 12px;
+    list-style: square; } }

@@ -1,0 +1,12 @@
+<% if notice && notice.length > 0 %>
+  <div class="alert alert-success fade in">
+    <a class="close" data-dismiss="alert" href="#">&times;</a>
+		<%= notice %>
+	</div>
+<% end %>
+<% if alert && alert.length > 0 %>
+  <div class="alert alert-error fade in">
+    <a class="close" data-dismiss="alert" href="#">&times;</a>
+		<%= alert %>
+  </div>
+<% end %>
