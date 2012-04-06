@@ -2,6 +2,13 @@
   <div class="entry_container">
     <div class="entry_header">
       <%= "Person".upcase %>
+      <% if person.red %>
+        <span class="label label-important pull-right"><%= "warning".upcase %></span>  
+      <% elsif person.green %>
+        <span class="label label-success pull-right"><%= "approved".upcase %></span>  
+      <% else %>
+        <span class="label label-warning pull-right"><%= "undecided".upcase %></span> 
+      <% end %>  
     </div>
     <div class="media">
       <% if person.image? %>
