@@ -1,5 +1,7 @@
 Watchdog::Application.routes.draw do
   
+  resources :categories
+
   resources :people
   resources :sessions
   

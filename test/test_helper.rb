@@ -38,4 +38,12 @@ class ActionDispatch::IntegrationTest
     fill_in "password", :with => "secret"
     click_on "Log in"
   end
+  
+  def create_person
+    sign_in_as_admin
+    visit new_person_path
+    fill_in "person_name", with: "Stan Romanek"
+    fill_in "person_description", with: "Stan Romanek talks crap"
+    click_on "Create Person"
+  end
 end

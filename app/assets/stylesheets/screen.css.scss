@@ -55,7 +55,42 @@ small {
 .form-horizontal .controls {
   margin-left: 132px;
 }
- 
+
+#category_select {
+  
+  label.radio {
+    margin:0 0 0 12px;
+    padding:4px;
+    border-radius:4px;
+    width:242px;
+    
+    &:nth-child(1).selected {
+      background:#B94A48;
+      color:white;
+    }
+    
+    &:nth-child(2).selected {
+      background:#F89406;
+      color:white;
+    }
+    
+    &:nth-child(3).selected {
+      background:#468847;
+      color:white;
+    }
+    
+  }
+  
+  input {
+    margin-left:6px;
+    margin-right:6px;
+  }
+  
+  
+  
+  
+}
+
 
 // People
 //==================================================
@@ -68,10 +103,6 @@ small {
     height:18px;
     padding:8px;
     color:#08C;
-  }
-  
-  .red {
-    color:red;
   }
   
   .media {

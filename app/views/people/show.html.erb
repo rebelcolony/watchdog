@@ -1,29 +1,16 @@
-<h1>Person</h1>
+<% if @person.category_id == 1 %> <!-- how can i do this better? -->
+  <span class="label label-important pull-right"><%= "warning".upcase %></span>
+<% elsif @person.category_id == 2 %>  
+  <span class="label label-warning pull-right"><%= "undecided".upcase %></span>
+<% elsif @person.category_id == 3 %>
+  <span class="label label-success pull-right"><%= "approved".upcase %></span>
+<% end %>
+<h1><%= @person.name %></h1>  
+<% if @person.image? %>
+  <%= image_tag @person.image_url(:thumb).to_s %>
+<% end %>
 
-<p>
-  <b>Name</b><br>
-  <%= @person.name %>
-</p>
-
-<p>
-  <b>Description</b><br>
-  <%= @person.description %>
-</p>
-
-<p>
-  <b>Red</b><br>
-  <%= @person.red %>
-</p>
-
-<p>
-  <b>Yellow</b><br>
-  <%= @person.yellow %>
-</p>
-
-<p>
-  <b>Green</b><br>
-  <%= @person.green %>
-</p>
+<%= markdown @person.description %>
 
 <div class="form-actions">
   <%= link_to 'Back', people_path, :class => 'btn'  %>

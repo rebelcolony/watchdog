@@ -21,6 +21,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'redcarpet'
 
 group :test do
   gem 'turn', '0.8.2', :require => false
@@ -28,7 +29,7 @@ group :test do
   gem 'launchy'
   gem 'watchr'
   gem 'ansi'
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', '~> 3.0'
   gem 'database_cleaner'
 end
 

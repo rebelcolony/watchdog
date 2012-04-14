@@ -1,6 +1,26 @@
 <%= form_for @person, :html => { :class => 'form-horizontal', :multipart => true } do |f| %>
   <fieldset>
-    <legend><%= controller.action_name.capitalize %> Person</legend>
+    <legend><%= controller.action_name.capitalize %> Person
+      <a class="btn btn-mini pull-right btn-info" data-toggle="modal" href="#myModal" >Formatting Help</a></legend>
+    
+    
+    <div class="modal hide fade" id="myModal">
+      <div class="modal-header">
+        <a class="close" data-dismiss="modal">×</a>
+        <h3>Markdown Formatting Help</h3>
+      </div>
+      <div class="modal-body">
+        <h4>New paragraphs</h4>
+        <p>Add a line break to make a new paragraph</p>
+        <h4>Bold text</h4>
+        <p>Here is some **bold text** and now back to normal</p>
+        <h4>Emphasis text</h4>
+        <p>Here is some _emphasis text_ and now back to normal</p>
+      </div>
+      <div class="modal-footer">
+        <a data-dismiss="modal" class="btn">Close</a>
+      </div>
+    </div>
 
     <div class="control-group">
       <%= f.label :name, :class => 'control-label' %>
@@ -16,26 +36,17 @@
       </div>
     </div>
 
-    <div class="control-group">
-      <%= f.label :red, :class => 'control-label' %>
-      <div class="controls">
-        <%= f.check_box :red, :class => 'check_box' %>
-      </div>
-    </div>
-
-    <div class="control-group">
-      <%= f.label :yellow, :class => 'control-label' %>
-      <div class="controls">
-        <%= f.check_box :yellow, :class => 'check_box' %>
-      </div>
-    </div>
-
-    <div class="control-group">
-      <%= f.label :green, :class => 'control-label' %>
-      <div class="controls">
-        <%= f.check_box :green, :class => 'check_box' %>
-      </div>
-    </div>
+    <div class="control-group" id="category_select">
+			<%= f.label :category, :class => "control-label" %>
+			<div class="controls">
+			  <% Category.all.each do |category| %>
+				  <label class="radio">
+				    <%= category.name %>
+					  <%= f.radio_button :category_id, category.id %>
+					</label>  
+				<% end %>
+			</div>			
+		</div>	
     
     <div class="control-group">
       <label class="control-label"> Select image</label>

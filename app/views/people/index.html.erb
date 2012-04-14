@@ -2,12 +2,12 @@
   <div class="entry_container">
     <div class="entry_header">
       <%= "Person".upcase %>
-      <% if person.red %>
-        <span class="label label-important pull-right"><%= "warning".upcase %></span>  
-      <% elsif person.green %>
-        <span class="label label-success pull-right"><%= "approved".upcase %></span>  
-      <% else %>
-        <span class="label label-warning pull-right"><%= "undecided".upcase %></span> 
+      <% if person.category_id == 1 %> <!-- how can i do this better? -->
+        <span class="label label-important pull-right"><%= "warning".upcase %></span>
+      <% elsif person.category_id == 2 %>  
+        <span class="label label-warning pull-right"><%= "undecided".upcase %></span>
+      <% elsif person.category_id == 3 %>
+        <span class="label label-success pull-right"><%= "approved".upcase %></span>
       <% end %>  
     </div>
     <div class="media">
