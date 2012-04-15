@@ -3,6 +3,8 @@ Watchdog::Application.routes.draw do
   resources :people
   resources :sessions
   
+  match 'search' => 'search#index'
+  
   match 'login' => 'sessions#new', :as => :login
   match 'logout' => 'sessions#destroy', :as => :logout
 
