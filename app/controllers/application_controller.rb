@@ -14,6 +14,12 @@ class ApplicationController < ActionController::Base
   def admin?
     session[:password] == "secret"
   end
+
+  def load_people
+    @people = Person.all
+  end
+
+  helper_method :load_people
   
 end
 

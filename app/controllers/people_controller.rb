@@ -1,8 +1,9 @@
 class PeopleController < ApplicationController
+
+  before_filter :load_people
   # GET /people
   # GET /people.json
   def index
-    @people = Person.all
 
     respond_to do |format|
       format.html # index.html.erb
