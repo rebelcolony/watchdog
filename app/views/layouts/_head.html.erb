@@ -37,10 +37,10 @@
           <a class="brand" href="/">Paranormal Watchdogs</a>
           <div class="container nav-collapse">
             <ul class="nav">
-                <li><%= link_to "People", "/"  %></li>
-                <li><%= link_to "Events", "/path2"  %></li>
-                <li><%= link_to "About", "/path2"  %></li>
-                <li><%= link_to "Contact", "/path3"  %></li>
+                <li id="people"><%= link_to "People", "/"  %></li>
+                <li id="events"><%= link_to "Events" %></li>
+                <li id="about"><%= link_to "About" %></li>
+                <li id="contact"><%= link_to "Contact" %></li>
                 <% if admin? %>
                   <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Create
