@@ -1,5 +1,7 @@
 Watchdog::Application.routes.draw do
   
+  mount Ckeditor::Engine => '/ckeditor'
+
   resources :people
   resources :sessions
   
