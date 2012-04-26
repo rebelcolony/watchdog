@@ -61,9 +61,9 @@
                       <a href="<%= person_path person %>">
                         <%= image_tag person.image.thumb.url %>
                         <h1><%= person.name %></h1>
-                        <% if person.red %>
+                        <% if person.category_id == 1 %>
                           <span class="label label-important"><%= "warning".upcase %></span>  
-                        <% elsif person.green %>
+                        <% elsif person.category_id == 3 %>
                           <span class="label label-success"><%= "approved".upcase %></span>  
                         <% else %>
                           <span class="label label-warning"><%= "undecided".upcase %></span> 
