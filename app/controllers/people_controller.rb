@@ -1,12 +1,13 @@
 class PeopleController < ApplicationController
-  
+
+  before_filter :load_people
   before_filter :authorize, :only => [:new, :create, :update, :destroy, :edit]
   
   # GET /people
   # GET /people.json
   def index
     @people = Person.includes(:category).all
-
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @people }

@@ -1,9 +1,10 @@
 Watchdog::Application.routes.draw do
   
-  resources :categories
+  mount Ckeditor::Engine => '/ckeditor'
 
   resources :people
   resources :sessions
+  resources :categories
   
   match 'search' => 'search#index'
   

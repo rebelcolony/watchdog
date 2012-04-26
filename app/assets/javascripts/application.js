@@ -13,5 +13,7 @@
 //= require jquery
 //= require jquery-ui
 //= require jquery_ujs
+//= require ckeditor/init
+//= require paranormalautocomplete
 //= require twitter/bootstrap
 //= require_tree .

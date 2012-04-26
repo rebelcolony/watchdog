@@ -19,7 +19,7 @@
       <h2><%= link_to person.name, person_path(person) %>
         <small>Updated <%= time_ago_in_words(person.updated_at) %> ago</small>
       </h2>
-      <%= truncate(person.description, :length => 300)  %>
+      <%= truncate(strip_tags(person.description), :length => 300)  %>
       <% if admin? %>
         <%= link_to 'Edit', edit_person_path(person), :class => 'btn btn-mini' %>
         <%= link_to 'Destroy', person_path(person), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>

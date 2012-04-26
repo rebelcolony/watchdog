@@ -1,13 +1,15 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.0'
+gem 'mime-types', '~> 1.17.2' #ckeditor requirements
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
 gem "carrierwave"
-gem "rmagick"
+gem "mini_magick" # required by ckeditor, also claims to be faster
+gem 'ckeditor', '3.7.0.rc3'
 
 # Gems used only for assets and not required
 # in production environments by default.

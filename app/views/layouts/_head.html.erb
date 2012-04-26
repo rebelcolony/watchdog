@@ -17,6 +17,7 @@
       }
     </style>
     <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= javascript_include_tag "application" %> <!-- sorry, we need js in the head for ckeditor to work -->
 
     <!-- Le fav and touch icons -->
     <link href="images/favicon.ico" rel="shortcut icon">
@@ -25,7 +26,6 @@
     <link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
   </head>
   <body>
-
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
           <div class="container">
@@ -54,6 +54,25 @@
             </ul>
             <form class="navbar-search pull-left">
               <input type="text" class="search-query" placeholder="Search for a person or event...">
+              <ul id="suggestions">
+                <% unless @people.nil? %>
+                  <% @people.each do |person| %>
+                    <li data-person="<%= person.name.downcase %>">
+                      <a href="<%= person_path person %>">
+                        <%= image_tag person.image.thumb.url %>
+                        <h1><%= person.name %></h1>
+                        <% if person.red %>
+                          <span class="label label-important"><%= "warning".upcase %></span>  
+                        <% elsif person.green %>
+                          <span class="label label-success"><%= "approved".upcase %></span>  
+                        <% else %>
+                          <span class="label label-warning"><%= "undecided".upcase %></span> 
+                        <% end %>  
+                      </a>
+                    </li>
+                  <% end -%>
+                <% end -%>
+              </ul>
             </form>
             <ul class="nav pull-right">
               <li class="dropdown">
