@@ -5,11 +5,13 @@ $(document).ready(function() {
 
 // apply selected states depending on current page
 	if (current_page.match(/admin\/posts/)) {
-		$("li#people").addClass('active');
+		$("#people").addClass('active');
 	} else if (current_page.match(/.com\/$/)) {
 		$('#people').addClass('active');
 	} else if (current_page.match(/.com$/)) {
 		$('#people').addClass('active');
+	} else if (current_page.match(/people/)) {
+		$('#people').addClass('active');	
 	} else if (current_page.match(/3000\/$/)) {
 		$('#people').addClass('active');		
 	};

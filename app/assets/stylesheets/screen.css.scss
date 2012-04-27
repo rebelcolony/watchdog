@@ -19,9 +19,9 @@ body {
   line-height: 18px; 
 }
 
-p, ol, ul, td {
+p, ol, ul, td, label, input, textarea {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 18px;
 }
 
@@ -90,7 +90,6 @@ small {
   
   
 }
-
 
 // People
 //==================================================

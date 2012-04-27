@@ -10,7 +10,7 @@
   <%= image_tag @person.image_url(:thumb).to_s %>
 <% end %>
 
-<%= markdown @person.description %>
+<%= raw @person.description %>
 
 <div class="form-actions">
   <%= link_to 'Back', people_path, :class => 'btn'  %>
