@@ -6,14 +6,14 @@ class SessionsController < ApplicationController
     session[:password] = params[:password]
     if
       session[:password] == "secret"
-      redirect_to(:root, notice: "Sucessfully logged in")
+      redirect_to(:root, :notice => "Sucessfully logged in")
     else
-      redirect_to(login_path, alert: "Wrong password")
+      redirect_to(login_path, :alert => "Wrong password")
     end
   end
 
   def destroy
     reset_session
-    redirect_to(:root, notice: 'Sucessfully logged out')
+    redirect_to(:root, :notice => 'Sucessfully logged out')
   end
 end
