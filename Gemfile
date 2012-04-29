@@ -11,6 +11,8 @@ gem "carrierwave"
 gem "mini_magick" # required by ckeditor, also claims to be faster
 gem 'ckeditor', '3.7.0.rc3'
 
+gem 'capistrano'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -31,7 +33,7 @@ group :test do
   gem 'launchy'
   gem 'watchr'
   gem 'ansi'
-  gem 'factory_girl_rails', '~> 3.0'
+  # gem 'factory_girl_rails'
   gem 'database_cleaner'
 end
 
