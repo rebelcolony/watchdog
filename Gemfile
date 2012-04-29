@@ -12,6 +12,7 @@ gem "mini_magick" # required by ckeditor, also claims to be faster
 gem 'ckeditor', '3.7.0.rc3'
 
 gem 'capistrano'
+gem 'rvm-capistrano'
 
 # Gems used only for assets and not required
 # in production environments by default.

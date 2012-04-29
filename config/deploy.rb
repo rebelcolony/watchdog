@@ -5,6 +5,10 @@ ssh_options[:forward_agent] = true
 set :use_sudo, false
 set :user, "zeuther"
 
+set :rvm_ruby_string, '1.8.7-p302@watchdog'                     # Or:
+
+require "rvm/capistrano" 
+
 set :application, "paranormalwatchdogs.com"
 set :repository,  "git@github.com:rebelcolony/watchdog.git"
 
