@@ -1,6 +1,6 @@
 require 'bundler/capistrano'
 
-default_run_options[:pty] = true
+default_run_options[:pty] = false
 ssh_options[:forward_agent] = true
 set :use_sudo, false
 set :user, "zeuther"
