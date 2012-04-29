@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   
   def authorize
     unless admin?
-      redirect_to(:root, alert: "Unauthorized Access")
+      redirect_to(:root, :alert => "Unauthorized Access")
     end  
   end
   

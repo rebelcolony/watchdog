@@ -30,7 +30,7 @@ group :test do
   gem 'launchy'
   gem 'watchr'
   gem 'ansi'
-  gem 'factory_girl_rails'
+  # gem 'factory_girl_rails'
   gem 'database_cleaner'
 end
 
