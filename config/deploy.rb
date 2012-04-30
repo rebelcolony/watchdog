@@ -3,13 +3,13 @@ require 'bundler/capistrano'
 default_run_options[:pty] = false
 ssh_options[:forward_agent] = true
 set :use_sudo, false
-set :user, "zeuther"
+set :user, "paranorm"
 
-set :rvm_ruby_string, '1.8.7-p302@watchdog'                     # Or:
+set :rvm_ruby_string, '1.9.3-p194@watchdog'
 
 require "rvm/capistrano" 
 
-set :application, "paranormalwatchdogs.com"
+set :application, "watchdog"
 set :repository,  "git@github.com:rebelcolony/watchdog.git"
 
 set :scm, :git
@@ -19,7 +19,7 @@ set :git_shallow_clone, 1
 set :deploy_via, :remote_cache
 set :copy_compression, :bz2
 set :rails_env, 'production'
-set :deploy_to, "/home/zeuther/#{application}"
+set :deploy_to, "/home/paranorm/#{application}"
 
 role :web, "#{application}"                          # Your HTTP server, Apache/etc
 role :app, "#{application}"                          # This may be the same as your `Web` server
